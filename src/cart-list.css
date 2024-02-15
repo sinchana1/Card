@@ -138,3 +138,36 @@ body{
 .position-relative{
   position: relative;
 }
+
+
+@media only screen and (max-width: 680px) {
+  .prod-card{
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .prod-remaining-sec{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .prod-img{
+    text-align: center;
+  }
+  .prod-discount, .prod-mrp, .offer-price{
+    font-size: 20px;
+  }
+  .prod-close{
+    top: 0;
+  }
+  .selected-list{
+    font-size: 16px;
+  }
+  .cart-block{
+    margin-inline: 0;
+  }
+  .nav-right{
+    font-size: 16px;
+  }
+  .prod-check{
+    top: 58px;
+  }
+}
