@@ -1,3 +1,4 @@
+import CheckBox from "./CheckBox";
 
 const ProductList = () =>{
     const products = [
@@ -15,7 +16,8 @@ const ProductList = () =>{
                 price: '₹1,899',
                 offer: '400'
             },
-            isChecked: true
+            isChecked: true,
+            returnStatus: 'Not returnable'
         },
         {
             id: 2,
@@ -31,7 +33,8 @@ const ProductList = () =>{
                 price: '₹2,299',
                 offer: '2,700'
             },
-            isChecked: false
+            isChecked: false,
+            returnStatus: '7 days return available'
         },
     ]
     const quantityArr = [
@@ -67,11 +70,8 @@ const ProductList = () =>{
             {
             products.map((prod) => (
                 <div className="prod-card">
-                    <div className="prod-check">
-                        <input className="ip-check" type="checkbox" checked={prod.isChecked} name={'prod'+prod.id}/>
-                        <span className="checkmark"></span>
-                    </div>
-                    <div className="prod-close">
+                    <CheckBox />
+                    <div className="prod-close cursor-pointer">
                         &times;
                     </div>
                     <div className="prod-img">
@@ -102,7 +102,7 @@ const ProductList = () =>{
                             <p className="offer-price">{prod.price.offer} OFF</p>
                         </div>
                         <div className="return-info">
-                            <p>Not returnable</p>
+                            <p>{prod.returnStatus}</p>
                         </div>
                     </div>
                 </div>
