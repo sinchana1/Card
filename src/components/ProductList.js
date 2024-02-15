@@ -74,7 +74,7 @@ const ProductList = () =>{
                     <div className="prod-close cursor-pointer">
                         &times;
                     </div>
-                    <div className="prod-img">
+                    <div className="prod-img text-center">
                         <img className="prod-image" src={prod.image} alt="Product Image"/>
                     </div>
                     <div>
