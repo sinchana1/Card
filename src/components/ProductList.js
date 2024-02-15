@@ -27,7 +27,7 @@ const ProductList = () =>{
             seller: 'NK Enterprise',
             size: 'M',
             quantity: 2,
-            Itemleft: 3,
+            Itemleft: 0,
             price: {
                 mrp: '₹4,999',
                 price: '₹2,299',
@@ -93,7 +93,7 @@ const ProductList = () =>{
                                 ))}
                             </select>
                             {
-                                prod.Itemleft ? <div className="items-left">{prod.Itemleft} left</div> : ''
+                                prod.Itemleft >0 ? <div className="items-left">{prod.Itemleft} left</div> : ''
                             }
                         </div>
                         <div className="product-pricing">
